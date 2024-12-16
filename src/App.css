@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 
+#root{
+    background-image: url(../src/assets/Images/wallpaper3.jpg);
+    background-size: contain;
+} */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-image:url('./assets/SVG/bg1.svg'); */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sousContainer {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dashboard {
+    background: rgb(240, 240, 240);
+    width: 60%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "four one one"
+        "four two three";
+    /* margin: auto; */
+    /* gap: 10px 10px; */
+    padding: 20px;
+    /* box-shadow: 0 0 20px darkgray; */
+    border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.one {
+    grid-area: one;
+    background-color: rgb(255, 255, 255);
+    /* margin-bottom: 10px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.two {
+    grid-area: two;
+    background-color: rgb(255, 255, 255);
+}
+
+.three {
+    grid-area: three;
+    background-color: rgb(255, 255, 255);
+}
+
+.four {
+    grid-area: four;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.charts {
+    width: 95%;
+    height: 95%;
+    border-radius: 20px;
+    /* border: solid black 1px; */
+    margin: auto;
+    box-shadow: 0 0 10px darkgrey;
+
+}
+
+.mainSection::-webkit-scrollbar {
+    display: none;
+}
+
+.sectionIcone {
+    width: 28px;
+    height: 28px;
+    margin: 0 20px 0 10px;
+}
+
+.headerSection {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainSection {
+    width: 100%;
+    height: 80%;
+    /* height: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: #000; */
+    /* gap: 0 0; */
+    /* position: relative; */
+    overflow-y: scroll;
+}
+
+.pulseContanier {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
+    width: 60%;
+    min-width: 100px;
+    aspect-ratio: 1/1;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulseValue {
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 120px;
+    width: 80%;
+    min-width: 80px;
+    aspect-ratio: 1/1;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.commandCenter{
+    width: 60%;
+    height:50px;
+    background: rgb(240, 240, 240);
+    margin: 20px 0 20px 0;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.button{
+    width: 65px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:800px) {
+    .dashboard {
+        background: white;
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        overflow-y: scroll;
+        gap: 10px 0;
+        /* margin: auto; */
+        /* gap: 10px 10px; */
+        /* padding: 20px; */
+    }
+
+    .charts{
+        max-height: 500px;
+        height:60%;
+        min-height: 300px;
+    }
+
 }
