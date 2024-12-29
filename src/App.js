@@ -38,8 +38,8 @@ function App() {
     host: "32a886debbcf47aeaf3c6a3930fd8df6.s1.eu.hivemq.cloud",
     port: 8884,
     protocol: "wss",
-    username: "Claude",
-    password: "kDz48w5b4D_AU-5",
+    username: "",
+    password: "",
     path: "/mqtt"
   })
 
